@@ -28,6 +28,7 @@ This project involves developing a low-power, reliable security system for remot
 ## Simulation
 SimulIDE lacks ultrasonic sensor support, so a square wave generator was used to simulate distance sensing by adjusting pulse width.
 
+![Simulation Diagram](simulation.png)
 
 ---
 
@@ -40,6 +41,6 @@ SimulIDE lacks ultrasonic sensor support, so a square wave generator was used to
 ---
 
 ## Circuit Diagram
-
+![Circuit Diagram](circuit_diagram.png)
 
 ---
