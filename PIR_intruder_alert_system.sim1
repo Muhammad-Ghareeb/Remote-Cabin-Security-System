@@ -1,0 +1,71 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Hd44780" CircId="Hd44780-1" mainComp="false" Show_id="true" Show_Val="false" Pos="180,-100" rotation="0" hflip="1" vflip="1" label="Hd44780-1" idLabPos="70,-82" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2" Cols="16" />
+
+<item itemtype="LedRgb" CircId="LedRgb-2" mainComp="false" Show_id="false" Show_Val="false" Pos="104,-52" rotation="0" hflip="1" vflip="1" label="LedRgb-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2.4 V" MaxCurrent_R="30 mA" Resistance_R="0.6 Ω" Threshold_G="3.5 V" MaxCurrent_G="30 mA" Resistance_G="0.6 Ω" Threshold_B="3.5 V" MaxCurrent_B="30 mA" Resistance_B="0.6 Ω" />
+
+<item itemtype="Subcircuit" CircId="Uno-3" mainComp="false" Show_id="true" Show_Val="false" Pos="52,-116" rotation="0" hflip="-1" vflip="1" label="Uno-3" idLabPos="1.74362,-8.95709" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Auto_Load="false" saveEepr="true" MainMcu="true" eeprom="23,0,0,0," SerialMon="-1" />
+</item>
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-4" mainComp="false" Show_id="false" Show_Val="false" Pos="-272,-124" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-4" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Resistor" CircId="Resistor-5" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="152,-52" rotation="0" hflip="1" vflip="1" label="Resistor-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Ground" CircId="Ground-6" mainComp="false" Show_id="false" Show_Val="false" Pos="204,92" rotation="0" hflip="1" vflip="1" label="Ground-6" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Push" CircId="Push-8" mainComp="false" Show_id="true" Show_Val="false" Pos="-200,-124" rotation="0" hflip="1" vflip="1" label="PIR1" idLabPos="-11.9316,-28.6496" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Push" CircId="Push-9" mainComp="false" Show_id="true" Show_Val="false" Pos="-204,-72" rotation="0" hflip="1" vflip="1" label="PIR2" idLabPos="-6.1195,-27.4872" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Clock" CircId="Clock-18" mainComp="false" ShowProp="Freq" Show_id="false" Show_Val="true" Pos="-264,12" rotation="0" hflip="1" vflip="1" label="Clock-18" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="true" Running="true" Voltage="5 V" Freq="350 Hz" Always_On="false" />
+
+<item itemtype="Switch" CircId="Switch-19" mainComp="false" Show_id="true" Show_Val="false" Pos="-188,12" rotation="0" hflip="1" vflip="1" label="Ultrasonic-echo" idLabPos="-31.6926,-30.3933" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" DT="false" Poles="1" />
+
+<item itemtype="TextComponent" CircId="TextComponent-24" mainComp="false" Show_id="false" Show_Val="false" Pos="-316,72" rotation="0" hflip="1" vflip="1" label="TextComponent-24" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="10 _px" Fixed_Width="true" Text="210 Hz ≈ 30 cm&#xa;[ &#x3E 210 Hz] &#x3D [ &#x3C 30 cm]&#xa;[ &#x3C 210 Hz] &#x3D [ &#x3E 30 cm]" />
+
+<item itemtype="TextComponent" CircId="TextComponent-25" mainComp="false" Show_id="false" Show_Val="false" Pos="-68,-256" rotation="0" hflip="1" vflip="1" label="TextComponent-25" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#ffffdc" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#000080" Font_Size="16 _px" Fixed_Width="true" Text="Group 6" />
+
+<item itemtype="Node" CircId="Node-7" mainComp="false" Pos="204,-52" />
+
+<item itemtype="Node" CircId="Node-10" mainComp="false" Pos="-236,-124" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Hd44780-1-PinRS" endpinid="Uno-3-13" pointList="196,-92,196,12,44,12" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Hd44780-1-PinEn" endpinid="Uno-3-12" pointList="212,-92,212,4,44,4" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Hd44780-1-dataPin4" endpinid="Uno-3-8" pointList="252,-92,252,-28,44,-28" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="Hd44780-1-dataPin5" endpinid="Uno-3-9" pointList="260,-92,260,-20,44,-20" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Hd44780-1-dataPin6" endpinid="Uno-3-10" pointList="268,-92,268,-12,44,-12" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Hd44780-1-dataPin7" endpinid="Uno-3-11" pointList="276,-92,276,-4,44,-4" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="LedRgb-2-Pin0" endpinid="Uno-3-7" pointList="88,-60,68,-60,68,-44,44,-44" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="LedRgb-2-Pin2" endpinid="Uno-3-6" pointList="88,-44,76,-44,76,-52,44,-52" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="LedRgb-2-Pin3" endpinid="Resistor-5-lPin" pointList="120,-52,136,-52" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Resistor-5-rPin" endpinid="Node-7-1" pointList="168,-52,204,-52" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Hd44780-1-PinRW" endpinid="Node-7-0" pointList="204,-92,204,-52" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="Node-7-2" endpinid="Ground-6-Gnd" pointList="204,-52,204,76" />
+
+<item itemtype="Connector" uid="Connector-16" startpinid="Push-8-switch0pinN" endpinid="Uno-3-2" pointList="-184,-124,84,-124,84,-84,44,-84" />
+
+<item itemtype="Connector" uid="Connector-17" startpinid="Push-9-pinP0" endpinid="Node-10-1" pointList="-220,-72,-236,-72,-236,-124" />
+
+<item itemtype="Connector" uid="Connector-18" startpinid="Fixed Voltage-4-outnod" endpinid="Node-10-0" pointList="-256,-124,-236,-124" />
+
+<item itemtype="Connector" uid="Connector-20" startpinid="Push-9-switch0pinN" endpinid="Uno-3-3" pointList="-188,-72,-132,-72,-132,-152,92,-152,92,-76,44,-76" />
+
+<item itemtype="Connector" uid="Connector-43" startpinid="Node-10-2" endpinid="Push-8-pinP0" pointList="-236,-124,-216,-124" />
+
+<item itemtype="Connector" uid="Connector-47" startpinid="Switch-19-pinP0" endpinid="Clock-18-outnod" pointList="-204,12,-248,12" />
+
+<item itemtype="Connector" uid="Connector-48" startpinid="Switch-19-switch0pinN" endpinid="Uno-3-A0" pointList="-172,12,-124,12,-124,-60,-100,-60" />
+
+</circuit>
